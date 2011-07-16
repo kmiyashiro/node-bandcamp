@@ -1,0 +1,15 @@
+{ "name" : "bandcamp"
+    "description" : "Library for rocking out with Bandcamp's API",
+    "version" : "0.0.1",
+    "directories" : { "lib" : "./lib" },
+    "main" : "index.js",
+    "author" : { 
+        "name" : "Kelly Miyashiro",
+        "email" : "miyashiro.kelly@gmail.com",
+        "url" : "http://non-diligent.com"
+    },
+    "repository" : { "type":"git", "url":"https://kmiyashiro@github.com/kmiyashiro/node-bandcamp.git" },
+    "homepage" : "https://github.com/kmiyashiro/node-bandcamp",
+    "dependencies": {
+    }
+}
