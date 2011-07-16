@@ -6,15 +6,13 @@ A simple library to easily interact with the [Bandcamp API](http://bandcamp.com/
 
 ## Installation
 
-*Not yet in NPM*
-
 ```
 npm install bandcamp
 ```
 
 ## Usage
 
-```
+```js
 var key = 'yourbandcampAPIkey', // contact <support@bandcamp.com> to request one
     bandcamp = require('bandcamp')(key),
     i = require('util').inspect;
@@ -37,7 +35,7 @@ Bandcamp split up different parts of their API into modules:
 
 Each module is versioned. You may pass a version object after your key to set custom versions of each module. In the future, I will update this library to always use the latest version of each module, so if you want to explicitly set the versions for your app and upgrade without fear, you can.
 
-```
+```js
 var versions = {
     band: 3,
     album: 2,
@@ -51,10 +49,10 @@ var key = 'yourbandcampAPIkey', // contact <support@bandcamp.com> to request one
 
 You may also include specific modules if you don't want to include all of them. The optional version parameter is an integer for individual modules.
 
-```
+```js
 var band = require('bandcamp').band('apikeygoeshere', optionalVersionInteger),
-    track = require('bandcamp').track('apikeygoeshere', 2)
-
+    track = require('bandcamp').track('apikeygoeshere', 2);
+```
 ## License 
 
 tl;dr: Do whatever you want.
