@@ -1,4 +1,5 @@
-{ "name" : "bandcamp"
+{   
+    "name" : "bandcamp",
     "description" : "Library for rocking out with Bandcamp's API",
     "version" : "0.0.1",
     "directories" : { "lib" : "./lib" },
