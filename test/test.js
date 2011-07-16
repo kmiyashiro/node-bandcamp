@@ -16,7 +16,7 @@ module.exports = {
     'Band: Search works': function() {
         bandcamp.band.search('baron von luxxury', function(err, result, status) {
             result = JSON.parse(result);
-
+            
             should.not.exist(err);
             should.not.exist(result.error);
             status.should.equal(200);
