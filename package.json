@@ -3,7 +3,7 @@
     "version" : "0.0.1",
     "directories" : { "lib" : "./lib" },
     "main" : "index.js",
-    "author" : { 
+    "author" : {
         "name" : "Kelly Miyashiro",
         "email" : "miyashiro.kelly@gmail.com",
         "url" : "http://non-diligent.com"
