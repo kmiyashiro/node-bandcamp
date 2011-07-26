@@ -18,7 +18,7 @@ var key = 'yourbandcampAPIkey', // contact <support@bandcamp.com> to request one
     i = require('util').inspect;
     
 bandcamp.band.search('the internet', function(err, result, status) {
-    console.log(i(JSON.parse(result)));
+    console.log(i(result));
 });
 ```
 
