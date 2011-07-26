@@ -1,9 +1,14 @@
 {   
     "name" : "bandcamp",
     "description" : "Library for rocking out with Bandcamp's API",
-    "version" : "0.0.1",
+    "version" : "0.0.2",
     "directories" : { "lib" : "./lib" },
     "main" : "index.js",
+    "keywords": [
+        "bandcamp",
+        "api",
+        "music"
+    ],
     "author" : {
         "name" : "Kelly Miyashiro",
         "email" : "miyashiro.kelly@gmail.com",
