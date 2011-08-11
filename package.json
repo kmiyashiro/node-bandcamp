@@ -2,7 +2,10 @@
     "name" : "bandcamp",
     "description" : "Library for rocking out with Bandcamp's API",
     "version" : "0.0.2",
-    "directories" : { "lib" : "./lib" },
+    "directories" : {
+        "lib" : "./lib",
+        "test": "./test"
+    },
     "main" : "index.js",
     "keywords": [
         "bandcamp",
@@ -17,5 +20,8 @@
     "repository" : { "type":"git", "url":"https://kmiyashiro@github.com/kmiyashiro/node-bandcamp.git" },
     "homepage" : "https://github.com/kmiyashiro/node-bandcamp",
     "dependencies": {
+    },
+    "devDependencies": {
+        "should": ">= 0.2.1"
     }
 }
