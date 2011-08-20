@@ -1,4 +1,4 @@
 .git*
 .DS_STORE
-test
-lib-cov
+./test
+./lib-cov
