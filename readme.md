@@ -12,6 +12,8 @@ npm install bandcamp
 
 ## Usage
 
+*View `test/test.js` for examples for every method.*
+
 ```js
 var key = 'yourbandcampAPIkey', // contact <support@bandcamp.com> to request one
     bandcamp = require('bandcamp')(key),
@@ -21,6 +23,8 @@ bandcamp.band.search('the internet', function(err, result, status) {
     console.log(i(result));
 });
 ```
+
+Most of the methods use the pattern: `module.method('search parameter', callback, optVersionOverride)`
 
 See [Bandcamp API Documentation](http://bandcamp.com/developer) for details on all the calls and view `test/test.js` for examples for every method.
 
@@ -46,12 +50,26 @@ var versions = {
 var key = 'yourbandcampAPIkey', // contact <support@bandcamp.com> to request one
     bandcamp = require('bandcamp')(key, versions);
 ```
+### Optional version override
 
-You may also include specific modules if you don't want to include all of them. The optional version parameter is an integer for individual modules.
+You may want to set your versions explicitly since I will update this library to always use the latest tested version of Bandcamp's API modules. They do not update them frequently, but just in case.
+
+You may also include specific modules if you don't want to include all of them. The optional version parameter is a config object for individual modules.
 
 ```js
-var band = require('bandcamp').band('apikeygoeshere', optionalVersionInteger),
-    track = require('bandcamp').track('apikeygoeshere', 2);
+// Set the "band" module to use version 2.
+var band = require('bandcamp')('apikeygoeshere', { band: 2 }).band,
+    bandcamp = require('bandcamp')('apikeygoeshere'); // uses default versions.
+
+// Band module version 2
+band.search('the internet', function(err, result, status) {
+    console.log(result);
+});
+
+// Track module version 1, overridden by third parameter
+bandcamp.track.search('1269403107', function(err, result, status) {
+    console.log(result);
+}, 1); // Override the track module version to 1 just for this call
 ```
 ## License 
 

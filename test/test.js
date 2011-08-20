@@ -4,6 +4,7 @@
  */
 var key = 'yourBandcampKey', // contact <support@bandcamp.com> to request one
     bandcamp = require('../lib/bandcamp')(key),
+    band2 = require('../lib/bandcamp')(key, { band: 2 }).band,
     should = require('should'),
     i = require('util').inspect;
 
@@ -14,6 +15,10 @@ module.exports = {
 
     'Test .version': function() {
         bandcamp.version.should.match(/^\d+\.\d+\.\d+$/);
+    },
+
+    'Versioned modules': function() {
+        band2.version.should.equal(2);
     },
 
     'Band: Search works': function() {
