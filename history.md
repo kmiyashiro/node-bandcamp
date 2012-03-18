@@ -1,3 +1,8 @@
+0.0.5 / 2012-3-18
+==================
+  * Added ability to curry arguments that will be applied to callback
+    arguments after error/response.
+  
 0.0.4 / 2011-8-20
 ==================
   * Fixed the versioning, actually works now.
