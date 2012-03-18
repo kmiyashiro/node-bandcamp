@@ -126,7 +126,7 @@ module.exports = {
 
             (typeof result).should.equal('object');
             result.should.have.keys('album_id', 'band_id');
-        });
+        }),
 
         // Track
         bandcamp.url.info('http://laurashigihara.bandcamp.com/track/zombies-on-your-lawn', function(err, result, status) {
@@ -136,5 +136,27 @@ module.exports = {
             (typeof result).should.equal('object');
             result.should.have.keys('band_id', 'track_id');
         });
+    },
+    
+    /**
+     * Partial Application/Curry
+     */
+     
+    'Partial Application works': function() {
+        bandcamp.track.info('1269403107',
+            function(err, result, status, test1, test2) {
+                should.exist(result);
+                status.should.equal(200);
+            
+                (typeof result).should.equal('object');
+                
+                // Partial application
+                test1.should.equal('Passed Arg');
+                (typeof test2).should.equal('object');
+            },
+            null, // Version, use default if null
+            'Passed Arg', // Passed for callback
+            ['array', 'arg'] // Passed for callback
+        );
     }
-}
+};

@@ -50,6 +50,20 @@ var versions = {
 var key = 'yourbandcampAPIkey', // contact <support@bandcamp.com> to request one
     bandcamp = require('bandcamp')(key, versions);
 ```
+
+### Partial application/Curry
+
+You may pass an arbitrary number of arguments after the 3 default ones (searchParam, Callback, [version]). For example:
+
+```js
+// Track module, default version (null), passed a URL
+bandcamp.track.search('1269403107', function(err, result, status, url) {
+    console.log(result, url);
+}, null, 'http://bandcamp.com');
+```
+
+The fourth parameter passed to track.search() will be passed as the fourth parameter to the callback. In this case, I passed a URL `http://bandcamp.com` and the callback can access it via the fourth argument, `url`.
+
 ### Optional version override
 
 You may want to set your versions explicitly since I will update this library to always use the latest tested version of Bandcamp's API modules. They do not update them frequently, but just in case.
