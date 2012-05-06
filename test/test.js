@@ -2,7 +2,7 @@
  * Replace key with your own API key.
  * Requires Expresso to run this test, npm install expresso -g; cd ..; expresso -I lib
  */
-var key = 'yourBandcampKey', // contact <support@bandcamp.com> to request one
+var key = 'tindadreinaetimannmengi', // contact <support@bandcamp.com> to request one
     bandcamp = require('../lib/bandcamp')(key),
     band2 = require('../lib/bandcamp')(key, { band: 2 }).band,
     should = require('should'),
@@ -88,7 +88,7 @@ module.exports = {
             status.should.equal(200);
 
             (typeof result).should.equal('object');
-            result.should.include.keys('tracks');
+            result.should.have.keys('tracks');
         });
     },
 
