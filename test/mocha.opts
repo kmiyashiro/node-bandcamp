@@ -1,0 +1,3 @@
+--ignore-leaks
+--slow 100
+-G
