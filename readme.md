@@ -87,7 +87,7 @@ bandcamp.track.search('1269403107', function(err, result, status) {
 ```
 ## License 
 
-tl;dr: Do whatever you want.
+tl;dr: Do whatever you want, as long as you keep this notice:
 
 (The MIT License)
 
