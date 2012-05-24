@@ -1,3 +1,12 @@
+0.0.7 / 2012-5-24
+==================
+  * try/catch JSON.parse, just in case API returns unexepcted response.
+
+0.0.6 / 2012-5-5
+==================
+  * Exposed customized qs function as `_qs`, does not encode commas. Mostly for   testing.
+  * Tests converted to Mocha
+
 0.0.5 / 2012-3-18
 ==================
   * Added ability to curry arguments that will be applied to callback
