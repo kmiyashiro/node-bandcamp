@@ -1,7 +1,7 @@
 {   
     "name" : "bandcamp",
     "description" : "Library for rocking out with Bandcamp's API",
-    "version" : "0.0.6",
+    "version" : "0.0.7",
     "directories" : {
         "lib" : "./lib",
         "test": "./test"
