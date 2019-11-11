@@ -1,3 +1,9 @@
+# possibly doesn't work anymore
+
+I took a look at Bandcamp's API docs and it seems like these endpoints no longer exist. Their new API focuses on band management, which makes sense. Unfortunately, I do not have a band, so I will not be updating this for the new API unless there is demand for it.
+
+---
+
 # Bandcamp Library for Node.js #
 
 A simple library to easily interact with the [Bandcamp API](http://bandcamp.com/developer).
